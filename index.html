@@ -148,6 +148,7 @@
                 overflow: hidden;
                 min-height: 300px;
                 max-height: 450px;
+                padding: 1rem;
             }
     
             .hero-content {
@@ -160,6 +161,14 @@
                 border: 1px solid rgba(255, 255, 255, 0.2);
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
                 animation: slideInDown 1s ease-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
             }
     
             .hero-content h1 {
@@ -252,6 +261,10 @@
                 background: white;
                 border-bottom: 1px solid #eee;
                 animation: fadeIn 1s ease-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
     
             .logo-container {
@@ -841,24 +854,155 @@
                 font-size: 1rem;
             }
     
+            /* Para telas grandes */
+            @media (min-width: 1025px) {
+                .hero-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                
+                .hero-content .logo-container {
+                    margin: 0 auto 1rem auto;
+                    display: block;
+                }
+                
+                header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .logo-container {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .brand-name,
+                .tagline {
+                    text-align: center;
+                }
+                
+                .contact-grid {
+                    justify-items: center;
+                }
+                
+                .button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+
+            /* Para tablets */
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .hero-content {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .hero-content .logo-container {
+                    margin: 0 auto 1rem auto;
+                    display: block;
+                }
+                
+                header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .logo-container {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .brand-name,
+                .tagline {
+                    text-align: center;
+                }
+                
+                .button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .main-button {
+                    margin: 0 auto;
+                }
+            }
+
             /* RESPONSIVO */
             @media (max-width: 768px) {
                 .hero-banner {
                     height: 50vh;
                     background-attachment: scroll;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                }
+                
+                .hero-content {
+                    width: 95%;
+                    max-width: 400px;
+                    margin: 0 auto;
+                    padding: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .hero-content h1 {
-                    font-size: 2.5rem;
+                    font-size: 2rem;
+                    text-align: center;
+                    white-space: normal;
+                    line-height: 1.2;
                 }
                 
                 .hero-content .logo-container {
-                    width: 120px;
-                    height: 120px;
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 1rem auto;
+                    display: block;
                 }
                 
                 .container {
                     box-shadow: none;
+                }
+                
+                header {
+                    padding: 2rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .logo-container {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .brand-name {
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+                
+                .tagline {
+                    text-align: center;
                 }
                 
                 .contact-section {
@@ -876,6 +1020,15 @@
                     min-width: 280px;
                     max-width: 280px;
                     height: 56px;
+                    margin: 0 auto;
+                    display: flex;
+                }
+                
+                .button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
                 }
                 
                 .map-wrapper {
@@ -891,6 +1044,7 @@
                 .section-title {
                     font-size: 1.8rem;
                     margin-bottom: 1.5rem;
+                    text-align: center;
                 }
                 
                 .floating-whatsapp {
@@ -903,6 +1057,45 @@
                 .floating-whatsapp svg {
                     width: 30px;
                     height: 30px;
+                }
+            }
+
+            /* Para telas muito pequenas */
+            @media (max-width: 480px) {
+                .hero-content {
+                    width: 90%;
+                    padding: 1rem;
+                }
+                
+                .hero-content h1 {
+                    font-size: 1.8rem;
+                }
+                
+                .hero-content .logo-container {
+                    width: 80px;
+                    height: 80px;
+                }
+                
+                .logo-container {
+                    width: 120px;
+                    height: 120px;
+                }
+                
+                .brand-name {
+                    font-size: 2.5rem;
+                }
+                
+                .main-button {
+                    min-width: 260px;
+                    max-width: 260px;
+                    padding: 0.9rem 1.5rem;
+                }
+                
+                .button-container {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
     </style>
